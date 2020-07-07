@@ -1,4 +1,4 @@
-#Tue Jul 07 17:19:41 CEST 2020
-base.0=C\:\\Users\\Fran\\Documents\\projects\\main_flutter_widgets\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Wed Jul 08 01:25:29 CEST 2020
+base.0=/home/franilones/Development/projects/flutter/main_flutter_widgets/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
