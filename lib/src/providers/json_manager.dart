@@ -3,7 +3,6 @@ import 'dart:convert';
 
 class _Menu {
   List<dynamic> options = [];
-  _Menu() {}
   //With async in loadData, it waits to response finish to load before finish constructor
   //This function returns a task that will be solved in the future
   Future<List<dynamic>> loadData() async {
