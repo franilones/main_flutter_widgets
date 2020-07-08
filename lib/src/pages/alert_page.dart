@@ -8,10 +8,18 @@ class AlertPage extends StatelessWidget {
         title: Text("Alert Page"),
         backgroundColor: Colors.redAccent,
       ),
-      //This button will return back
+      body: Center(
+        child: RaisedButton(
+          onPressed: () => _showAlert(context),
+          child: Text("Show Alert"),
+          textColor: Colors.white,
+          color: Colors.redAccent,
+          shape: StadiumBorder(),
+        ),
+      ), //This button will return back
       floatingActionButton: FloatingActionButton(
         child: Icon(
-          Icons.keyboard_arrow_left,
+          Icons.close,
           color: Colors.white,
         ),
         onPressed: () {
@@ -21,5 +29,33 @@ class AlertPage extends StatelessWidget {
         backgroundColor: Colors.red,
       ),
     );
+  }
+
+  void _showAlert(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0)),
+            title: Text("Alert example!"),
+            content: Column(
+              //To dont use all the screen
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Text("This is an example of how to use alerts on Flutter!"),
+                FlutterLogo(size: 100.0)
+              ],
+            ),
+            actions: <Widget>[
+              FlatButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: Text("Ok")),
+              FlatButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: Text("Cancel")),
+            ],
+          );
+        });
   }
 }
